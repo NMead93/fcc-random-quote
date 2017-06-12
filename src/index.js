@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import './index.css';
 
 class Root extends React.Component {
@@ -45,10 +45,10 @@ class Root extends React.Component {
 class Display extends React.Component {
     render(){
         return(
-            <div>
+            <div className="display">
                 <div className="quote">{this.props.quote}</div>
                 <div className="author">-{this.props.author}</div>
-                <button type="button" onClick={this.props.onClick}>Get Quote</button>
+                <Button bsStyle="primary" onClick={this.props.onClick}>Get Quote</Button>
             </div>
         );
     }
